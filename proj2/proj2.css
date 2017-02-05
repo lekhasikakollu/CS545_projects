@@ -1,0 +1,132 @@
+/* Colors for project are used from the html color picker http://www.w3schools.com/colors/colors_picker.asp */
+html{
+margin :0;
+padding : 0;
+}
+body{
+	font-family : Asul;
+	background: url("images/2.jpg") ;
+	color : #ffff66;
+	font-size : 25px;
+	margin : 5px 60px 20px 60px;
+}
+p{
+	margin : 0;
+	text-align : justify;
+}
+ul {
+    list-style-type: none;
+    }
+legend {
+   border: 3px solid orange;
+    padding: 2px 10px 2px 10px;
+    font-weight: bold;
+	background-color : rgba(76, 175, 80, 0.6);
+	
+    }
+fieldset {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 12px;                                  
+    width: 650px;
+    border: 3px solid orange;    
+    } 
+li {
+    margin-bottom: 5px;
+    }    
+h3{
+	font : italic 1.1em Chewy;
+	color : #e6e600;
+}
+a:link{
+	font-weight: bold;
+	text-decoration : none;
+	color : orange;
+}
+a:visited {
+	font-weight : bolder;
+	text-decoration : none;
+	color : #ff3333; 
+	
+}
+a:hover, a:focus , a:active {
+	text-decoration : underline;
+	color : #ff9980;
+}
+
+
+header{
+	
+	height : 90px;
+	
+}
+header h1{
+	
+	margin-top : 5px;
+	margin-bottom : 10px;
+	font-family :  Chewy;
+	
+	
+}
+header h2{
+	margin-top : 10px;
+	margin-bottom : 40px;
+	font-family : Chewy;
+
+	
+}
+
+.go{
+	text-decoration : none;
+	text-align : center;
+	background-color : black;
+}
+
+footer{
+	margin-top : 30px;
+	clear: both;
+    padding: 3em ;
+    color: #fff;
+    background: #134347;
+	text-align : center;
+	display : block;
+}
+footer a:link, footer a:visited{
+	margin-right: 20px;
+}
+.main{
+	/* //background : url("images/1.jpg") no-repeat bottom right; */
+	padding : 0 175px 0 110px;
+	margin: 50px auto 150px 	AUTO;
+}
+
+.info{
+	margin-top : 20px;
+	padding : 10px 20px 10px 20px;
+	min-width : 470px;
+	width : 100%;
+	background-color : rgba(76, 175, 50, 0.6);
+	
+}
+/* .heading{ */
+	/* text-align : center; */
+	/* color :  */
+/* } */
+
+.button{
+	margin-left : 100px;
+	font-size : 20px;
+	background-color : #ffbb33;
+	border-radius: 5px;
+	font-family :Adamina;
+}
+.field{
+	background-color : rgba(76, 175, 50, 0.6);
+	margin: 150px auto 150px 	AUTO;
+}
+#message_line{
+	font-weight: bolder;
+	text-align : center ;
+	color : #cc3300;
+	
+}
