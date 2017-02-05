@@ -1,0 +1,140 @@
+	/* Name : Chandra Srilekha Sikakollu    
+	Account:  jadrn043
+	Red Id: 81911119
+	Course : CS545, Fall 2016,Project #4 */
+body
+{
+	background-image : url("1.jpg");
+font-family:Georgia;
+color : black;
+font-weight : bold;
+
+}
+#banner{
+	margin : 10px 50px 15px 50px;
+	padding : 2px 20px 2px 20px;
+	border-radius : 15px;
+	background-color :  #ffdab3;
+	color : #663300;
+	border-color :#663300;
+border-width : 20px;	
+}
+h1,h2,h3 {
+	font-size: 50px;
+        text-shadow: 5px 5px 8px #52527a;
+	text-align:center;
+}
+#navigation ul {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    }
+#navigation li {
+    display: inline;
+    padding: 5px 10px 5px 10px;
+    margin-left: -4px; 
+    background-color: black;   
+    }
+    
+#navigation a {
+    font-size : 22px;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    color:  #80bfff;
+    
+    }                 
+#navigation a:hover {
+    color: black;
+    background-color: #80bfff ;
+    
+}
+#navigation a:active {
+    color: #A7A68C;
+}	
+#navigation1 ul {
+	border-radius : 10px;
+    text-align: center;
+    margin : 10px 50px 15px 50px;
+	background-color: #80bfff ;
+    }
+#navigation1 li {
+        list-style-type : none;
+		padding: 25px 20px 25px 20px;
+		border-radius : 20px;
+		background-color : #b3ecff;
+		margin : 20px 30px 20px 30px;
+    }
+#navigation1 a {
+	font-size : 22px;
+    text-decoration: none;
+    font-weight: bold;
+    color:  black;
+    
+    }   	
+#bigt{
+	color : #66ff33;
+	font-size : 30px;
+} 
+#hist{
+	margin : 10px 50px 15px 50px;
+	padding : 2px 20px 2px 20px;
+	background-color : #80bfff;
+	
+}
+#nmenu{
+	margin : 10px 50px 15px 50px;
+	padding : 2px 20px 2px 20px;
+	background-color : #80bfff;
+}
+#nmenu ul {
+	 border-radius : 15px;
+	list-style-type : square ;
+	list-style-position : outside;
+	padding : 20px;
+	background-color:#b3ecff;	
+}
+#nmenu ul li:nth-child(even){
+ margin-top : 10px;
+ padding : 20px;
+ background-color : #80bfff;
+}
+#text {
+	font-size: 20px;
+	text-decoration : underline;
+}
+#amain th, td {
+    border-bottom: 1px solid #ddd;
+	padding : 10px;
+}
+#amain table{
+	margin : 40px;
+	border-spacing : 40px;
+	background-color : #80aaff;
+	}
+#amain tr:hover {
+	background-color: #80bfff;
+}
+ #amain img{
+	border-radius : 10px;
+	width : 200px;
+	box-shadow : 10px 10px 5px black;
+}
+#mmain{
+	margin : 10px 50px 15px 50px;
+	padding : 2px 20px 2px 20px;
+	line-height : 30px;
+	background-color : #80bfff;
+}
+#mmain a:link{
+	 color : blue;
+	
+}
+#mmain ul li{
+	background-color : #b3ecff;
+	list-style-position : inside;
+}
+#fmain{
+	margin : 10px 50px 15px 50px;
+	background-color : #80bfff;
+}

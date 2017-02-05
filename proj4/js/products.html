@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--Name : Chandra Srilekha Sikakollu    
+		Account:  jadrn043
+		Red Id: 81911119
+		Course : CS545, Fall 2016,Project #4
+		-->
+		<meta charset="utf-8">
+		<title>Welcome</title>
+		<link rel="stylesheet" href="ui/jquery-ui.min.css">
+		<link rel="stylesheet" href="proj1.css">
+		<link rel="stylesheet" href="proj4.css">
+		
+		<script  src="/jquery/jquery.js"></script>
+		<script src="ui/jquery-ui.min.js"></script>
+		
+		<script type="text/javascript" src="ajax_get_lib.js"></script>
+		<script type="text/javascript" src="populate_page.js"></script>
+		<script type="text/javascript" src="shopping_cart.js"></script>
+	</head>
+
+	<body>
+		<div class="ui-widget-header">
+		<div id="counter">Your cart: <span id="count">0</span></div>
+			<h1>Bertha`s Deluxe Chocolates !</h1>
+		</div> 
+
+		<div class="ui-widget">
+		<div id="main" class="ui-widget-content"> 
+		<input type="button" class="ui-button" value="Milk Chocolate" id="milk" /> &nbsp; &nbsp;
+		<input type="button" class="ui-button" value="Dark Chocolate" id="dark" /> &nbsp; &nbsp;
+		<input type="button" class="ui-button" value="Nuts and chews" id="nuts" /> &nbsp;&nbsp;
+		<input type="button" class="ui-button" value=" Brittles and toffies " id="brittle" /> &nbsp; &nbsp;
+		<input type="button" class="ui-button" value="Truffles" id="truffle" /> &nbsp;&nbsp;
+		<input type="button" class="ui-button" value="Gifts " id="gift" /> &nbsp;&nbsp;
+		<input type="button" class="ui-button" value="Holiday assortments " id="hol" /> &nbsp;&nbsp;
+
+		<div id="cart"></div>
+		<!-- <input type="button" name="open_dialog"  value="Order Now" id="order_button" />   -->       
+
+		<div id="content"></div>
+
+		</div>
+
+		<div id="dialog-modal" class="widget-dialog-container" title="Complete Your Order">
+
+		<form method="post" action="/perl/jadrn043/orders.cgi" id="checkout">    
+		 <fieldset class="field">
+				<legend>Billing Address</legend>
+				<ul>
+								<li><label for="billing_fname">First Name</label>
+									<input type="text" name="billing_fname" id="billing_fname" size="25" autofocus /></li> 
+								<li><label for="billing_mname">Middle Name </label>
+									<input type="text" name="billing_mname" id="billing_mname" /></li>				
+								<li><label for="billing_lname">Last Name</label>
+									<input type="text" name="billing_lname" id="billing_lname" size="25" /></li> 
+								<li><label for="billing_address">Address</label>
+									<input type="text" name="billing_address" id="billing_address"  size="55" /></li> 
+								<li><input type="text" name="billing_address1"  size="55" /></li> 		
+								<li><label for="billing_city">City</label>
+									<input type="text" name="billing_city" id="billing_city" size="25" /> 
+									<label for="billing_state">State</label>
+									<select id="billing_state" name="billing_state" >
+										<option value=""></option>
+										<option value="AL">AL</option>
+										  <option value="AK">AK</option>
+										  <option value="AZ">AZ</option>
+										  <option value="AR">AR</option>
+										  <option value="CA">CA</option>
+										  <option value="CO">CO</option>
+										  <option value="CT">CT</option>
+										  <option value="DE">DE</option>
+										  <option value="DC">DC</option>
+										  <option value="FL">FL</option>
+										  <option value="GA">GA</option>
+										  <option value="HI">HI</option>
+										  <option value="ID">ID</option>
+										  <option value="IL">IL</option>
+										  <option value="IN">IN</option>
+										  <option value="IA">IA</option>
+										  <option value="KS">KS</option>
+										  <option value="KY">KY</option>
+										  <option value="LA">LA</option>
+										  <option value="ME">ME</option>
+										  <option value="MD">MD</option>
+										  <option value="MA">MA</option>
+										  <option value="MI">MI</option>
+										  <option value="MN">MN</option>
+										  <option value="MS">MS</option>
+										  <option value="MO">MO</option>
+										  <option value="MT">MT</option>
+										  <option value="NE">NE</option>
+										  <option value="NV">NV</option>
+										  <option value="NH">NH</option>
+										  <option value="NJ">NJ</option>
+										  <option value="NM">NM</option>
+										  <option value="NY">NY</option>
+										  <option value="NC">NC</option>
+										  <option value="ND">ND</option>
+										  <option value="OH">OH</option>
+										  <option value="OK">OK</option>
+										  <option value="OR">OR</option>
+										  <option value="PA">PA</option>
+										  <option value="RI">RI</option>
+										  <option value="SC">SC</option>
+										  <option value="SD">SD</option>
+										  <option value="TN">TN</option>
+										  <option value="TX">TX</option>
+										  <option value="UT">UT</option>
+										  <option value="VT">VT</option>
+										  <option value="VA">VA</option>
+										  <option value="WA">WA</option>
+										  <option value="WV">WV</option>
+										  <option value="WI">WI</option>
+										  <option value="WY">WY</option>
+												</select><br />    
+									<label for="billing_zip">Zip Code</label>
+									<input type="text" name="billing_zip" id="billing_zip" size="10" maxlength="10" /></li>      
+								<li><label for="billing_area_phone">Primary Phone</label>
+									(<input type="text" name="billing_area_phone"  id="billing_area_phone" size="4" maxlength="3" />)  
+									 <input type="text" name="billing_prefix_phone" size="4" maxlength="3" />
+									<input type="text" name="billing_phone" size="5" maxlength="4" /></li> 
+								</ul>
+		</fieldset>
+		<fieldset class="field">
+		<legend> Shipping Address </legend>						
+								<ul>
+								<li>
+								<input type="checkbox" name="sameasbilling" /> Same as Billing Address
+								</li>
+								<li><label for="shipping_fname">First Name</label>
+									<input type="text" name="shipping_fname" id="shipping_fname" size="25" autofocus /></li> 
+								<li><label for="shipping_mname">Middle Name </label>
+									<input type="text" name="shipping_mname" id="shipping_mname" /></li>				
+								<li><label for="shipping_lname">Last Name</label>
+									<input type="text" name="shipping_lname" id="shipping_lname" size="25" /></li> 
+								<li><label for="shipping_address">Address</label>
+									<input type="text" name="shipping_address" id="shipping_address" size="55"  /></li> 
+								<li><input type="text" name="shipping_address1"  size="55" /></li> 		
+								<li><label for="shipping_city">City</label>
+									<input type="text" name="shipping_city" id="shipping_city" size="25" /> 
+									<label for="shipping_state">State</label>
+									<input type="text" name="shipping_state" id="shipping_state" size="3" />      
+									<label for="shipping_zip">Zip Code</label>
+									<input type="text" name="shipping_zip" id="shipping_zip" size="10" maxlength="10" /></li>
+								<li><label for="shipping_area_phone">Primary Phone</label>
+									(<input type="text" name="shipping_area_phone"  id="shipping_area_phone" size="4" maxlength="3" />)  
+									 <input type="text" name="shipping_prefix_phone" size="4" maxlength="3" />
+									<input type="text" name="shipping_phone" size="5" maxlength="4" /></li> 
+								
+				</ul>
+			</fieldset>	
+		<fieldset class="field">
+				<legend>Payment Information</legend>
+				  <ul>
+					<li>
+					  <label for="payment_type">Payment Type: </label>
+					  <select id="payment_type" name="payment_type" >
+						<option value="Visa">Visa</option>
+						<option value="Mastercard">Mastercard</option>
+						<option value="Discover">Discover</option>
+						<option value="AMEX">American Express</option>
+					  </select>
+					</li>
+					<li>
+					  <label for="card_number">Card Number: </label>
+					  <input type="text" id="card_number" name="card_number" placeholder="XXXXXXXXXXXXXXXX" />
+					</li>
+					<li>
+					  <label for="exp_date">Expiration Date: </label>
+					  <select name="exp_month" required>
+						<option value="01">January</option>
+						<option value="02">February</option>
+						<option value="03">March</option>
+						<option value="04">April</option>
+						<option value="05">May</option>
+						<option value="06">June</option>
+						<option value="07">July</option>
+						<option value="08">August</option>
+						<option value="09">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+					  </select>
+					  <input type="number" name="exp_year" size="4" maxlength="4" placeholder="YYYY" />
+					</li>
+				  
+				  </ul>
+			  </fieldset>
+			 
+		</form>  
+
+
+		   <div id="errors"> </div>  
+
+		<input class="ui-button" type="reset" name="Cancel2" value="Cancel"> &nbsp; &nbsp; <input class="ui-button" id="Continue4" value="Continue" type="submit">
+
+		</div>
+		</div>
+
+		<!-- <div id="summary-dialog" title="Order Summary">
+		  </div> -->
+
+		  <!-- <div id="success-dialog" title="Thank you">
+			<p>Your order has been submitted.</p>
+		  </div> -->
+		<div id="test"></div>
+
+	</body>
+</html>
